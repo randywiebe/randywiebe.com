@@ -19,7 +19,7 @@
     <!-- Custom styles for this template -->
     <!--<link href="./css/jumbotron.css" rel="stylesheet">-->
 </head>
-<body>
+<body onload="showThisSiteContent()">
     <div class="top-menu">
         <div class="top-menu-buttons">
             <a href="defaultv2.html">Home</a>
@@ -31,50 +31,96 @@
         <div class="navmenu">
             <ul>
                 <li>
-                    <a href="#">This Site</a>
+                    <a href="#" onclick="showThisSiteContent()">This Site</a>
                 </li>
                 <li>
-                    <a href="#">The Other David</a>
+                    <a href="#" onclick="showTheOtherDavidContent()">The Other David</a>
                 </li>
                 <li>
-                    <a href="#">Wedding</a>
+                    <a href="#" onclick="showWeddingSiteContent()">Wedding</a>
                 </li>
             </ul>
         </div>
         <div class="main">
-            <div class="this-site-content">
+            <div id="thisSiteContent" class="this-site-content">
+                <!-- Template -->
                 <!--<div class="blog-post">
-                    <h4>2015-08-30</h4>
+                    <h4>Date</h4>
                     <p>
-                        What about a third one?
-                    </p>
-                </div>
-                <div class="blog-post">
-                    <h4>2015-08-30</h4>
-                    <p>
-                        Turns out adding another post breaks the layout. Now to figure out why these divs aren't stacking.
+                        Content.
                     </p>
                 </div>-->
+                <div class="blog-post">
+                    <h4>2015-08-31</h4>
+                    <p>
+                        My goal for today was to get the menu on the left working, so that content for each item on the list shows when that list item is clicked.
+                        It didn't take long to get a basic script working, but it's not very extensible. Next time I think I'll make my goal improving the script
+                        so that it takes in a parameter, finds and shows the element with that id, and hides everything else in the "main" div.
+                    </p>
+                    <p>Small update: I was adding a bit of content to the other items and I realized that content for all the list items was showing every time I loaded the page.
+                     I fixed it by setting the body onload() function to call the function that shows the content for this site but I don't know if that's the best solution.</p>
+                </div>
                 <div class="blog-post">
                     <h4>2015-08-30</h4>
                     <p>
                         I've spent a bit of time this weekend redoing this site.
                     </p>
                     <p>
-                        I initially created the main page by copying and tweaking the jumbotron example from the Bootstrap site but realized I hadn't really learned anything about 
+                        I initially created the main page by copying and tweaking the jumbotron example from the Bootstrap site but realized I hadn't really learned anything about
                         designing and writing html using css styles. So, I started from scratch. The resulting page doesn't scale as nicely for smaller screens but at least
                         I'm learning.
                     </p>
                 </div>
             </div>
-            <div class="the-other-david-content">
+            <div id="theOtherDavidContent" class="the-other-david-content">
+                <!-- Leave the link to the site at the top -->
+                <div class="blog-post">
+                    <h4><a href="http://theotherdavid.com">The Other David</a></h4>
+                </div>
+                <!--<div class="blog-post">
+                    <h4>Date</h4>
+                    <p>
+                        Content.
+                    </p>
+                </div>-->
 
+                <div class="blog-post">
+                    <h4>2015-08-31</h4>
+                    <p>
+                        I have a friend named David who posts a lot of really interesting environment-related stuff on facebook.
+                        I know, another environmentalist/conservationist/biologist named David. That was actually the inspiration
+                        for the name of the website I'll be maintaining for him.
+                    </p>
+                    <p>
+                        <a href="http://theotherdavid.com">Check it out</a>.
+                    </p>
+                </div>
             </div>
-            <div class="wedding-site-content">
+            <div id="weddingSiteContent" class="wedding-site-content">
 
             </div>
         </div>
     </div>
-        
+
+    <script>
+        function showThisSiteContent() {
+            document.getElementById("thisSiteContent").style.display = "block";
+            document.getElementById("theOtherDavidContent").style.display = "none";
+            document.getElementById("weddingSiteContent").style.display = "none";
+        }
+
+        function showTheOtherDavidContent() {
+            document.getElementById("thisSiteContent").style.display = "none";
+            document.getElementById("theOtherDavidContent").style.display = "block";
+            document.getElementById("weddingSiteContent").style.display = "none";
+        }
+
+        function showWeddingSiteContent() {
+            document.getElementById("thisSiteContent").style.display = "none";
+            document.getElementById("theOtherDavidContent").style.display = "none";
+            document.getElementById("weddingSiteContent").style.display = "block";
+        }
+    </script>
+
 </body>
 </html>

@@ -185,6 +185,11 @@ p {
     width: 640px
 }
 
+.blog-post a {
+    color: #ffc442;
+    text-decoration: none;
+}
+
 .hidden > div {
     display: none;
 }
