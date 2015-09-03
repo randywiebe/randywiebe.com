@@ -54,7 +54,7 @@ p {
     border-color: #fff;
     border-radius: 4px;
     list-style: none;
-    max-width: 15%;
+    max-width: 160px;
     margin-top: 20px;
     padding: 0;
     position: absolute;
@@ -145,6 +145,7 @@ p {
 
 .main {
     margin-left: 14em;
+    max-width: 720px;
 }
 
 .top-menu {
