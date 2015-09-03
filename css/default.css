@@ -134,6 +134,12 @@ p {
 }
 
 .jumbotron h1 {
+    margin-bottom: 0px;
+    padding-left: 60px;
+}
+
+.jumbotron h2 {    
+    margin-bottom: 40px;
     padding-left: 60px;
 }
 
