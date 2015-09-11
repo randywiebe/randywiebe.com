@@ -62,8 +62,10 @@
                         It didn't take long to get a basic script working, but it's not very extensible. Next time I think I'll make my goal improving the script
                         so that it takes in a parameter, finds and shows the element with that id, and hides everything else in the "main" div.
                     </p>
-                    <p>Small update: I was adding a bit of content to the other items and I realized that content for all the list items was showing every time I loaded the page.
-                     I fixed it by setting the body onload() function to call the function that shows the content for this site but I don't know if that's the best solution.</p>
+                    <p>
+                        Small update: I was adding a bit of content to the other items and I realized that content for all the list items was showing every time I loaded the page.
+                        I fixed it by setting the body onload() function to call the function that shows the content for this site but I don't know if that's the best solution.
+                    </p>
                 </div>
                 <div class="blog-post">
                     <h4>2015-08-30</h4>
@@ -88,6 +90,15 @@
                         Content.
                     </p>
                 </div>-->
+                <div class="blog-post">
+                    <h4>2015-09-10</h4>
+                    <p>
+                        I installed php on my computer and <a href="php-test.php">got it working locally</a> in preparation for adding a backend to this site. Initially I was thinking I'd
+                        implement my own user credentials/login functionality, but then I remembered reading about <a href="http://blog.codinghorror.com/the-god-login/">the God login</a>
+                        and decided to rethink my plans. I'll still need some way of mapping users to roles or permissions or something. Initially there won't be a reason for anyone
+                        besides Dave to log in, but who knows what features the site will have 2, 5, or 10 years from now.
+                    </p>
+                </div>
                 <div class="blog-post">
                     <h4>2015-09-05</h4>
                     <p>
@@ -118,7 +129,21 @@
                 </div>
             </div>
             <div id="weddingSiteContent" class="wedding-site-content">
-
+                <!-- Leave the link to the site at the top -->
+                <div class="blog-post">
+                    <h4><a href="http://shannonfrenchand.randywiebe.com">Wedding</a></h4>
+                </div>
+                <div class="blog-post">
+                    <h4>2015-09-10</h4>
+                    <p>
+                        Almost two years ago I met a young woman that I'm marrying in just over a year. I made a website where people can find information about our special day.
+                        I'm planning to use the Google Maps javascript api for an interactive map that people can use to get directions without leaving the site. I'd also like
+                        to add an RSVP form so that people don't have to mail their RSVPs if they'd prefer not to.
+                    </p>
+                    <p>
+                        No wedding crashers please!
+                    </p>
+                </div>
             </div>
         </div>
     </div>
