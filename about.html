@@ -14,7 +14,7 @@
 
     <link href="./css/default.css" rel="stylesheet">
 </head>
-<body>
+<body onload="showExperience()">
     <div class="top-menu">
         <div class="top-menu-buttons">
             <a href="default.html">Home</a>
@@ -23,7 +23,223 @@
         </div>
     </div>
     <div id="layout">
-
+        <div class="navmenu">
+            <ul>
+                <li>
+                    <a href="#" onclick="showExperience()">Experience</a>
+                </li>
+                <li>
+                    <a href="#" onclick="showResume()">Resume</a>
+                </li>
+                <li>
+                    <a href="#" onclick="showTranscript()">Education</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div id="experienceContent" class="this-site-content">
+                <!-- Template -->
+                <!--<div class="blog-post">
+                    <h4>Date</h4>
+                    <p>
+                        Content.
+                    </p>
+                </div>-->
+                <div id="0" class="blog-post">
+                    <h4>Starting Out</h4>
+                    <p>
+                        When I started attending Brock University in 2005 I thought I wanted to be a chartered accountant. I completed two semesters, a four month
+                        co-op term, another semester, another four month co-op term, another semester, and finally an eight month co-op term before I finally decided
+                        accounting wasn't for me.
+                    </p>
+                    <p>
+                        So I enrolled in the Computer Science program at the University of Western Ontario. I spent my first year there as a part-time student,
+                        completing the prerequisite courses I'd need for second year courses. I had seen the value of co-op programs (turns out they're just as good
+                        for allowing you to realize what you won't enjoy as they are for giving you experience in a field you will enjoy) so I joined UWO's Science
+                        Internship Program and accepted a sixteen month contract for a position with Phoenix Interactive Design, Inc (the internships range from
+                        eight to sixteen months and are completed between third and fourth year).
+                    </p>
+                    <p>
+                        The following is by no means an exhaustive list of my experiences and accomplishments as a developer, but it should convey an approximation
+                        of my abilities.
+                    </p>
+                </div>
+                <div class="blog-post">
+                    <h4>Introduction To .NET</h4>
+                    <p>
+                        Most of the projects I had completed for school courses used Java. I had taken one course on C++ and no courses on C# prior to starting my
+                        internship, I was a little apprehensive about working at a company where the products were developed using C++ and C#. My interviewers didn't
+                        share my concern, telling me that transitioning from Java to C# would be easy. And it was. The syntax might have been a little different, but
+                        C# was a strongly-typed, object-oriented language and I knew how to write that kind of code.
+                    </p>                    
+                </div>
+                <div class="blog-post">
+                    <h4>WinForms, WPF, &amp; WCF</h4>
+                    <p>
+                        Prior to my internship I hadn't really worked with user interfaces (UI). Course projects were run using a command line, so the learning curve
+                        during my first few weeks at Phoenix was pretty steep.
+                    </p>
+                    <p> I learned about many of the different Windows Forms controls that come with the .NET
+                        framework. I learned about using third-party controls and libraries, which hadn't really been necessary for the relatively simple code
+                        required for course projects. I learned about data-binding to keep the UI and backend data in sync. I learned about using a data-access layer,
+                        specifically EntityFramework, to load and save that backend data being manipulated by the UI. I learned about writing WCF web services to
+                        access data when the data source (database, files, etc.) is not located on the same computer from which the UI is being run.
+                    </p>
+                    <p>
+                        UIs are great, but they're only one layer of a useful application. I had learned about code structure and organization in school, but once I
+                        began working on real-world applications, the need for naming conventions and organizational standards was concretely reinforced in my mind.
+                        Separating the code data-access layer from the layer of code that interprets/applies business rules from the layer that supplies data to the user
+                        interface from the user interface layer makes for a much easier time maintaining and extending code.
+                    </p>
+                </div>  
+                <div class="blog-post">
+                    <h4>C++ &amp; Win32 API</h4>
+                    <p>
+                        One of the more novel projects I worked on at Phoenix involved displaying a WPF window displaying data from a web service on top of a C++
+                        application. The WPF component was fairly simple since it was used strictly to display information, so I set up the bindings and had it refresh
+                        periodically to ensure the data displayed remained up-to-date.
+                    </p>
+                    <p>
+                        The really interesting part was learning about how to get a reference to the window handle of the WPF window using the Win32 API so I could 
+                        position the window where I wanted it, and then figuring out how to allow the threads to communicate without causing exceptions. After scouring
+                        the internet and attempting some tests I realized it was as simple as marking the entry point of the WPF application with the [STAThread]
+                        attribute.
+                    </p>
+                </div>              
+                <div class="blog-post">
+                    <h4>Android</h4>
+                    <p>
+                        After I completed my internship I returned to Western for my fourth and final year. As part of the Software Engineering minor, I was required
+                        to take a course called Software Maintenance and Configuration. This course ended up being a lot of fun, because to teach us about maintaining/
+                        configuring software, the instructor split the class into two groups and assigned each to develop a module for Western's official app. One group
+                        was responsible for the iPhone version of the app module, and the other group was responsible for the Android version (the Blackberry version
+                        had been completed by a class the previous year). I was in the Android group.
+                    </p>
+                    <p>
+                        I had written Java before, but never used the Android framework. Luckily their documentation and tutorials are very helpful and I was able to
+                        get the Eclipse IDE installed and hooked up to our course SVN repository without too much trouble. We were given a list of requirements by our 
+                        instructor and the address of a SOAP web service by Western's IT department where the information we required would be available.
+                    </p>
+                    <p>
+                        The module we developed allowed students to find a place to eat on campus. The app displays a list of places to eat on campus, including
+                        operating hours and distance relative to your location (if you have location services enabled). The information is retrieved from the web service
+                        and saved in a SQLite database for better performance. 
+                    </p>
+                </div>
+                <div class="blog-post">
+                    <h4>Silverlight</h4>
+                    <p>
+                        After graduating from Western with a Bachelor of Science in Computer Science and Minor in Software Engineering, I accepted a position at 
+                        <a href="http://www.camis.com/" target="_blank">Camis, Inc.,</a> where I've contributed to many different projects, including a Windows Forms
+                        desktop application, a WPF/Silverlight out-of-browser desktop application, an ASP.NET web application, an ASP.NET MVC 5 web application, and 
+                        an AngularJS web application.
+                    </p>
+                    <p>
+                        The Silverlight application was intended to be the next generation of interface for clients, until Microsoft announced support for Silverlight
+                        would end in 2021. Even though plans are in place to replace it, it's still in use by some clients and needs to be supported so I've gained a
+                        lot of experience implementing features and change requests using C#, WPF, Silverlight, and Telerik for Silverlight controls. This interface
+                        communicates with the database via WCF service contracts so I've also gained some experience working with WCF web services.
+                    </p>
+                    <p>
+                        One of the more interesting tasks I worked on specific to this interface was creating a custom UI control based on a third-party control being
+                        used. For security purposes, this application has a lock screen which is activated by a configurable period of inactivity (or manually enabling
+                        it). The inactivity was tracked by running a timer that reset whenever an event took place (mouse click, key press, etc). There was one control
+                        where events weren't resetting the timer because the events were being handled by the control internally, so I created a custom control that
+                        used this third-party control as a base for all functionality except the input events, so that I could pass along to the lock screen timer
+                        when an event had occurred.
+                    </p>                    
+                </div>                
+                <div class="blog-post">
+                    <h4>ASP.NET &amp; MVC 5</h4>
+                    <p>
+                        I also started to become more aware of specific design patters being used. I had learned about design patterns at Western, but during my
+                        internship I was preoccupied with learning about the .NET framework and switching between projects so frequently I didn't pay as much attention
+                        as I should have to the structure of the code. At Camis I've been able to spend enough time working with each product to note when patterns
+                        like singletons and factories are used and why. The Silverlight application uses the model-view-viewmodel pattern and the data-binding abilities
+                        of the WPF and Silverlight controls to keep data synchronized between the presentation layer and the data/model layer.
+                    </p>
+                    <p>
+                        One of the recent projects I've worked on at Camis was a web application created using ASP.NET and the MVC 5 framework. In addition to learning
+                        about these technologies and the model-view-controller (MVC) design pattern, I was also able to expand my knowledge of more foundational web
+                        technologies like html, css styling, and javascript.
+                    </p>                    
+                </div>
+                <div class="blog-post">
+                    <h4>AngularJS</h4>
+                    <p>
+                        The project I'm currently working on is an application that uses ASP.NET and the AngularJS framework. Camis' current generation of web interface
+                        was built a long time ago and suffers from issues with the design that make it difficult to maintain and to use. The goal of this new
+                        application is to address those problems by simplifying the design and improving the usability.
+                    </p>
+                    <p>
+                        Maintaining and extending the product will be dramatically easier due to the use of a custom-developed code generation tool. The tool takes
+                        a model written in C# and generates most of the code required client-side in Typescript using T4 templates. Generating Typescript instead
+                        of Javascript allows developers to catch more errors at compile-time instead of run-time, so there is less risk of run-time issues caused
+                        by mismatched types that could be missed during testing.
+                    </p>
+                    <p>
+                        The code generation tool generates the Typescript model, HTML view, and Typescript controller based on the property types, custom property
+                        attributes, and custom class attributes supplied in the server-side C# model. To allow for customized behaviour in the controllers, the tool
+                        actually generates a second controller which is an extension of the first that does not get regenerated when the tool is run so changes to it
+                        aren't lost. The generated Typescript and HTML do all the basic work required to use the AngularJS framework, which will give developers
+                        more time to develop features instead of spending time on setting up basic things like registering controllers and routes.
+                    </p>
+                </div>
+                <div class="blog-post">
+                    <h4>SQL</h4>
+                    <p>
+                        None of the projects I've worked on in the course of my career have been primarily focused on SQL development but many have required some,
+                        usually in the form of an update to a table creation script or a stored procedure.
+                    </p>
+                    <p>
+                        One responsibility I was given in my first year at Camis that has taught me a great deal about database administration and SQL development was
+                        the preparation of database update packages for our software releases. I use a database schema comparison tool to generate SQL scripts that,
+                        when run, will update the database schema that exists in production to the database schema that exists in the software build we choose to
+                        release.
+                    </p>
+                    <p>
+                        The tool isn't perfect, so I double-check the generated scripts, make any necessary updates to ensure they'll run without error in our
+                        production environment, and run them against a test database that is a backup of a production database.
+                    </p>
+                </div>
+            </div>
+            <div id="resumeContent" class="this-site-content">
+                <div class="blog-post" style="min-width: 960px; min-height: 720px">
+                    <h4>Resume</h4>
+                    <iframe src="http://localhost:55104/docs/resume.pdf" frameborder="0" style="min-width: 960px; min-height: 720px"></iframe>
+                </div>
+            </div>
+            <div id="transcriptContent" class="this-site-content">
+                <div class="blog-post" style="min-width: 960px; min-height: 720px">
+                    <h4>Unofficial UWO Transcript</h4>
+                    <iframe src="http://localhost:55104/docs/unofficialuwotranscript.pdf" frameborder="0" style="min-width: 960px; min-height: 720px"></iframe>
+                </div>
+                <div class="blog-post" style="min-width: 960px; min-height: 720px">
+                    <h4>Unofficial Brock Transcript</h4>
+                    <iframe src="http://localhost:55104/docs/unofficialbrocktranscript.pdf" frameborder="0" style="min-width: 960px; min-height: 720px"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function showExperience() {
+            document.getElementById("experienceContent").style.display = "block";
+            document.getElementById("resumeContent").style.display = "none";
+            document.getElementById("transcriptContent").style.display = "none";
+        }
+
+        function showResume() {
+            document.getElementById("experienceContent").style.display = "none";
+            document.getElementById("resumeContent").style.display = "block";
+            document.getElementById("transcriptContent").style.display = "none";
+        }
+
+        function showTranscript() {
+            document.getElementById("experienceContent").style.display = "none";
+            document.getElementById("resumeContent").style.display = "none";
+            document.getElementById("transcriptContent").style.display = "block";
+        }
+    </script>
 </body>
 </html>

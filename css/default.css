@@ -176,10 +176,21 @@ p {
     background-color: #fff;
 }
 
-.blog-post h4 {
+.blog-post h4 {    
     font-size: 20px;
     text-decoration: underline;
 }
+
+.blog-post h5 {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.blog-post ul {
+    margin-left: 32px;
+    margin-right: 8px;
+}
+
 
 .blog-post {
     background: rgba(100, 100, 100, 0.5);
