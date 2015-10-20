@@ -191,6 +191,10 @@ p {
     margin-right: 8px;
 }
 
+.blog-post td h5 {
+    padding-right: 16px;
+    text-decoration: none;
+}
 
 .blog-post {
     background: rgba(100, 100, 100, 0.5);
